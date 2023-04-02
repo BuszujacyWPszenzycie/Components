@@ -1,4 +1,5 @@
 @use 'colors' as *;
+@use 'animations' as *;
 
 *,
 *::before,
@@ -30,16 +31,39 @@ body {
 		background-color: $bright-green;
 		height: 100vh;
 		position: fixed;
-		// transform: translateX(-300px);
+		transform: translateX(-300px);
+		transition: transform 0.4s;
 
-		&-icon {
+		&-show {
+			transform: translateX(0);
+		}
+
+		&-icons {
 			position: absolute;
-			font-size: 4rem;
-			left: 2rem;
-			top: 2rem;
+			display: flex;
+			justify-content: space-between;
 			padding: 3rem;
+			align-items: center;
+			height: 150px;
+			width: 300px;
+			font-size: 4rem;
+			text-decoration: none;
 			color: $dark-blue;
-			position: fixed;
+		}
+
+		&-computerIcon {
+			color: $dark-blue;
+		}
+
+		&-arrowLeftIcon {
+			// animation: arrowLeft 2s infinite;
+			cursor: pointer;
+		}
+
+		&-arrowRightIcon {
+			position: absolute;
+			padding: 5rem;
+			font-size: 3rem;
 		}
 
 		&-items {

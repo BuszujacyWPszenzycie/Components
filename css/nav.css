@@ -1,3 +1,11 @@
+@keyframes arrowLeft {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 *,
 *::before,
 *::after {
@@ -27,15 +35,34 @@ body {
   background-color: #5ff1d0;
   height: 100vh;
   position: fixed;
+  transform: translateX(-300px);
+  transition: transform 0.4s;
 }
-.nav__desktop-icon {
+.nav__desktop-show {
+  transform: translateX(0);
+}
+.nav__desktop-icons {
   position: absolute;
-  font-size: 4rem;
-  left: 2rem;
-  top: 2rem;
+  display: flex;
+  justify-content: space-between;
   padding: 3rem;
+  align-items: center;
+  height: 150px;
+  width: 300px;
+  font-size: 4rem;
+  text-decoration: none;
   color: #0a192f;
-  position: fixed;
+}
+.nav__desktop-computerIcon {
+  color: #0a192f;
+}
+.nav__desktop-arrowLeftIcon {
+  cursor: pointer;
+}
+.nav__desktop-arrowRightIcon {
+  position: absolute;
+  padding: 5rem;
+  font-size: 3rem;
 }
 .nav__desktop-items {
   display: flex;

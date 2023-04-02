@@ -3,7 +3,9 @@ const navMobile = document.querySelector('.nav__mobile-items')
 const header = document.querySelector('header')
 const navMobileItems = document.querySelectorAll('.nav__mobile-item')
 const navMobileShadow = document.querySelector('.nav__mobile-shadow')
-const navDesktopShadow = document.querySelector('.nav__desktop-shadow')
+const navDesktop = document.querySelector('.nav__desktop')
+const navDesktopLeftIconArrow = document.querySelector('.nav__desktop-arrowLeftIcon')
+const navDesktopRightIconArrow = document.querySelector('.nav__desktop-arrowRightIcon')
 
 document.addEventListener('DOMContentLoaded', function () {
 	function addShadow() {
@@ -31,3 +33,9 @@ const showMobileNav = () => {
 }
 
 navBtn.addEventListener('click', showMobileNav)
+
+const showDesktopNav = () => {
+	navDesktop.classList.add('nav__desktop-show')
+}
+
+navDesktopRightIconArrow.addEventListener('click', showDesktopNav)
