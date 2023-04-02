@@ -1,0 +1,66 @@
+@use 'colors' as *;
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-size: 1.6rem;
+	font-family: 'Montserrat', sans-serif;
+	background-color: $dark-blue;
+}
+
+.header {
+	height: 100vh;
+}
+
+.nav {
+	z-index: 100;
+	filter: none;
+	&__mobile {
+		position: relative;
+		filter: none;
+
+		&-btn {
+			position: absolute;
+			position: fixed;
+			right: 2rem;
+			top: 2rem;
+			padding: 3rem;
+			z-index: 2;
+			filter: blur(0);
+			filter: none;
+		}
+
+		&-items {
+			width: 100vw;
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			background-color: rgba(0, 0, 0, 0.4);
+			transform: translatex(-150%);
+			transition: transform 0.4s;
+
+			&-active {
+				transform: translateX(0);
+				position: fixed;
+				backdrop-filter: blur(2px);
+			}
+		}
+	}
+}
+
+.blur {
+	filter: blur(4px);
+}
