@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap">
+  <script src="https://kit.fontawesome.com/288c8cccc3.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./css/hamburger.css">
   <link rel="stylesheet" href="./css/nav.css">
 
@@ -16,19 +17,39 @@
 
 <body>
   <header class="header">
-    <nav class="nav nav__mobile">
 
+    <nav class="nav nav__mobile">
+      <div class="nav__mobile-shadow"></div>
+      <a href="#" class=""><i class="fa-solid fa-laptop-code nav__mobile-icon"></i></a>
       <button class="hamburger hamburger--spin nav__mobile-btn" type="button">
         <span class="hamburger-box">
           <span class="hamburger-inner"></span>
         </span>
       </button>
-      <div class="nav__mobile-shadow"></div>
+
       <div class="nav__mobile-items">
         <a href="" class="nav__mobile-item">About</a>
         <a href="" class="nav__mobile-item">Work</a>
         <a href="" class="nav__mobile-item">Certificates</a>
         <a href="" class="nav__mobile-item">Contact</a>
+      </div>
+
+    </nav>
+
+    <nav class="nav nav__desktop">
+
+      <div class="nav__desktop-icons">
+        <a href="#" class=""><i class="fa-solid fa-laptop-code nav__desktop-icon"></i></a>
+        <i class="fa-solid fa-arrow-left"></i>
+
+      </div>
+
+
+      <div class="nav__desktop-items">
+        <a href="" class="nav__desktop-item">About</a>
+        <a href="" class="nav__desktop-item">Work</a>
+        <a href="" class="nav__desktop-item">Certificates</a>
+        <a href="" class="nav__desktop-item">Contact</a>
       </div>
 
     </nav>

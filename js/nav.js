@@ -3,13 +3,16 @@ const navMobile = document.querySelector('.nav__mobile-items')
 const header = document.querySelector('header')
 const navMobileItems = document.querySelectorAll('.nav__mobile-item')
 const navMobileShadow = document.querySelector('.nav__mobile-shadow')
+const navDesktopShadow = document.querySelector('.nav__desktop-shadow')
 
 document.addEventListener('DOMContentLoaded', function () {
 	function addShadow() {
 		if (window.scrollY >= 80) {
-			navMobileShadow.classList.add('display-block')
+			navMobileShadow.classList.add('nav__mobile-shadow-show')
+			navDesktopShadow.classList.add('nav__desktop-shadow-show')
 		} else {
-			navMobileShadow.classList.remove('display-block')
+			navMobileShadow.classList.remove('nav__mobile-shadow-show')
+			navDesktopShadow.classList.remove('nav__desktop-shadow-show')
 		}
 	}
 

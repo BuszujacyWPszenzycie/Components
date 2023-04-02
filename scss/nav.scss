@@ -24,16 +24,57 @@ body {
 }
 
 .nav {
+	&__desktop {
+		display: none;
+		width: 300px;
+		background-color: $bright-green;
+		height: 100vh;
+		position: fixed;
+		// transform: translateX(-300px);
+
+		&-icon {
+			position: absolute;
+			font-size: 4rem;
+			left: 2rem;
+			top: 2rem;
+			padding: 3rem;
+			color: $dark-blue;
+			position: fixed;
+		}
+
+		&-items {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			height: 100vh;
+		}
+	}
+
 	&__mobile {
 		position: relative;
-		height: 130px;
 
 		&-shadow {
 			position: fixed;
-			display: none;
 			width: 100vw;
 			height: 130px;
 			background-color: rgba(0, 0, 0, 0.4);
+			transform: translateY(-130px);
+			transition: transform 0.4s;
+
+			&-show {
+				transform: translateY(0);
+			}
+		}
+
+		&-icon {
+			position: absolute;
+			font-size: 4rem;
+			left: 2rem;
+			top: 2rem;
+			padding: 3rem;
+			position: fixed;
+			color: $bright-green;
 		}
 
 		&-btn {
@@ -62,9 +103,21 @@ body {
 				backdrop-filter: blur(2px);
 			}
 		}
+
+		&-item {
+			text-decoration: none;
+			color: $light-blue;
+			text-transform: uppercase;
+			margin-bottom: 2rem;
+			font-size: 3rem;
+		}
 	}
 }
 
 .display-block {
-	display: block;
+	transform: translateY(0);
 }
+
+@import './small';
+@import './medium';
+@import './large';
