@@ -24,11 +24,17 @@ body {
 }
 
 .nav {
-	z-index: 100;
-	filter: none;
 	&__mobile {
 		position: relative;
-		filter: none;
+		height: 130px;
+
+		&-shadow {
+			position: fixed;
+			display: none;
+			width: 100vw;
+			height: 130px;
+			background-color: rgba(0, 0, 0, 0.4);
+		}
 
 		&-btn {
 			position: absolute;
@@ -36,9 +42,7 @@ body {
 			right: 2rem;
 			top: 2rem;
 			padding: 3rem;
-			z-index: 2;
-			filter: blur(0);
-			filter: none;
+			z-index: 1;
 		}
 
 		&-items {
@@ -61,6 +65,6 @@ body {
 	}
 }
 
-.blur {
-	filter: blur(4px);
+.display-block {
+	display: block;
 }

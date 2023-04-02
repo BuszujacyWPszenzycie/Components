@@ -1,0 +1,6 @@
+Stara funkcja do odpalania nawigacji:
+
+const showMobileNav = () => {
+	navBtn.classList.toggle('is-active')
+	navMobile.classList.toggle('nav__mobile-items-active')
+}
